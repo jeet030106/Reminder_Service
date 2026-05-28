@@ -3,6 +3,7 @@ const {PORT} = require('./config/server-config')
 const bodyParser = require('body-parser')
 const serverConfig = require('./config/server-config')
 const sendEmail = require('./services/email-service')
+const job = require('./util/job')
 
 const setUpAndStartServer = () => {
     const app = express()
@@ -18,6 +19,7 @@ const setUpAndStartServer = () => {
         //     'Testing mail',
         //     'This is a testing Email, if not received then check!'
         // )
+        job()
     })
 }
 

@@ -17,8 +17,8 @@ module.exports = (sequelize, DataTypes) => {
     content: {type:DataTypes.STRING, allowNull:false},
     subject: {type: DataTypes.STRING,allowNull:false},
     recepientMail: {type: DataTypes.STRING,allowNull:false},
-    status: {type: DataTypes.ENUM, allowNull:false},
-    NotificationTicket: {type: DataTypes.DATE, allowNull:false, values: ["PENDING","SUCCESS","FAILED"]}
+    status: {type: DataTypes.ENUM, allowNull:false,values: ["PENDING","SUCCESS","FAILED"]},
+    notificationTime: {type: DataTypes.DATE, allowNull:false}
   }, {
     sequelize,
     modelName: 'NotificationTicket',
