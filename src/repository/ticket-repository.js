@@ -10,6 +10,15 @@ class TicketRepository{
             throw(error)
         }
     }
+
+    async create(data){
+        try{
+            const response= await NotificationTicket.create(data)
+            return response
+        }catch (error){
+            throw(error)
+        }
+    }
 }
 
 module.exports=TicketRepository
